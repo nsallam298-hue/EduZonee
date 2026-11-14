@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الهيكل الأساسي لصفحة HTML | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-page {
+            width: 90%;
+            max-width: 950px;
+            margin: 40px auto;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #24577A, #397FA8);
+            color: white;
+            padding: 35px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-header h2 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .lesson-header p {
+            line-height: 1.9;
+        }
+
+        .lesson-content {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e8edf2;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .lesson-content h3 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+            margin-bottom: 18px;
+        }
+
+        .lesson-content p {
+            line-height: 2;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .lesson-content ul {
+            padding-right: 25px;
+            line-height: 2.2;
+        }
+
+        .code-example {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: #F4B544;
+            padding: 20px;
+            border-radius: 9px;
+            overflow-x: auto;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .note {
+            background: #FFF7E6;
+            border-right: 5px solid #F4B544;
+            padding: 15px;
+            border-radius: 7px;
+            line-height: 1.9;
+            margin-top: 15px;
+        }
+
+        .element-box {
+            background: #EAF2F8;
+            padding: 18px;
+            border-radius: 9px;
+            margin-bottom: 15px;
+        }
+
+        .element-box h4 {
+            color: #24577A;
+            margin-bottom: 8px;
+        }
+
+        .practice {
+            background: #EAF2F8;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .practice label {
+            display: block;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+
+        .practice button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .practice button:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+
+        #answer {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #24577A;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .lesson-navigation a:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="lesson-page">
+
+        <section class="lesson-header">
+            <h2>الدرس الثاني: الهيكل الأساسي لصفحة HTML</h2>
+
+            <p>
+                في هذا الدرس سنتعرف على التركيب الأساسي
+                لصفحة HTML، ونتعلم وظيفة العناصر الرئيسية
+                وكيفية كتابة صفحة ويب بطريقة صحيحة.
+            </p>
+
+            <p>مدة الدرس المقترحة: 20 دقيقة</p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أهداف الدرس</h3>
+
+            <p>بنهاية هذا الدرس ستكونين قادرة على:</p>
+
+            <ul>
+                <li>التعرف على الهيكل الأساسي لملف HTML.</li>
+                <li>فهم وظيفة DOCTYPE.</li>
+                <li>التمييز بين Head وBody.</li>
+                <li>استخدام عناصر HTML الأساسية.</li>
+                <li>إنشاء صفحة ويب بسيطة بنفسك.</li>
+            </ul>
+        </section>
+
+        <section class="lesson-content">
+            <h3>ما المقصود بهيكل صفحة HTML؟</h3>
+
+            <p>
+                تتكون صفحة HTML من مجموعة من العناصر المنظمة
+                التي تخبر المتصفح بكيفية قراءة محتوى الصفحة
+                وعرضه للمستخدم.
+            </p>
+
+            <p>
+                عند إنشاء صفحة ويب جديدة، نبدأ بكتابة الهيكل
+                الأساسي الذي يحتوي على معلومات الصفحة
+                والمحتوى الذي سيظهر داخل المتصفح.
+            </p>
+
+            <div class="note">
+                معلومة مهمة: يجب أن يحتوي كل ملف HTML
+                على هيكل منظم حتى يستطيع المتصفح التعامل
+                مع محتوى الصفحة بصورة صحيحة.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>الهيكل الأساسي لصفحة HTML</h3>
+
+            <p>
+                هذا مثال على الهيكل الأساسي لأي صفحة HTML:
+            </p>
+
+            <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is my first page.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </pre>
+
+            <p>
+                يتكون هذا الكود من مجموعة عناصر،
+                ولكل عنصر وظيفة محددة.
+            </p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>شرح عناصر الهيكل الأساسي</h3>
+
+            <div class="element-box">
+                <h4>1. العنصر DOCTYPE</h4>
+                <p>
+                    يُكتب في بداية الملف، ويخبر المتصفح
+                    بأن الصفحة تستخدم معيار HTML5.
+                </p>
+
+                <pre class="code-example">&lt;!DOCTYPE html&gt;</pre>
+            </div>
+
+            <div class="element-box">
+                <h4>2. العنصر HTML</h4>
+                <p>
+                    يمثل العنصر الرئيسي الذي يحتوي على
+                    جميع عناصر صفحة الويب.
+                </p>
+
+                <pre class="code-example">&lt;html&gt; ... &lt;/html&gt;</pre>
+            </div>
+
+            <div class="element-box">
+                <h4>3. العنصر Head</h4>
+                <p>
+                    يحتوي على معلومات خاصة بالصفحة،
+                    مثل عنوان الصفحة وترميز الأحرف
+                    وربط ملفات CSS.
+                </p>
+
+                <pre class="code-example">
+&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+                </pre>
+            </div>
+
+            <div class="element-box">
+                <h4>4. العنصر Title</h4>
+                <p>
+                    يحدد عنوان الصفحة الذي يظهر
+                    في علامة تبويب المتصفح.
+                </p>
+
+                <pre class="code-example">
+&lt;title&gt;EduZone&lt;/title&gt;
+                </pre>
+            </div>
+
+            <div class="element-box">
+                <h4>5. العنصر Body</h4>
+                <p>
+                    يحتوي على المحتوى الذي يظهر للمستخدم
+                    داخل صفحة الويب، مثل العناوين
+                    والفقرات والصور والروابط.
+                </p>
+
+                <pre class="code-example">
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+                </pre>
+            </div>
+
+            <div class="element-box">
+                <h4>6. العنصر Meta</h4>
+                <p>
+                    يُستخدم لإضافة معلومات عن الصفحة،
+                    مثل ترميز الأحرف وإعدادات عرض الصفحة.
+                </p>
+
+                <pre class="code-example">
+&lt;meta charset="UTF-8"&gt;
+                </pre>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>الفرق بين Head وBody</h3>
+
+            <p>
+                من المهم معرفة الفرق بين هذين العنصرين:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Head:</strong>
+                    يحتوي على معلومات وإعدادات الصفحة
+                    التي لا تظهر عادةً داخل محتوى الصفحة.
+                </li>
+
+                <li>
+                    <strong>Body:</strong>
+                    يحتوي على العناصر والمحتوى الذي
+                    يراه المستخدم داخل الصفحة.
+                </li>
+            </ul>
+
+            <div class="note">
+                مثال: اسم الموقع الذي يظهر في علامة تبويب
+                المتصفح يُكتب داخل Title في Head،
+                أما العنوان الذي يظهر داخل الصفحة فيُكتب
+                باستخدام H1 داخل Body.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أهمية ترميز الأحرف UTF-8</h3>
+
+            <p>
+                نستخدم العنصر التالي داخل Head:
+            </p>
+
+            <pre class="code-example">
+&lt;meta charset="UTF-8"&gt;
+            </pre>
+
+            <p>
+                يساعد هذا الترميز المتصفح على عرض الحروف
+                والرموز بلغات مختلفة، ومنها اللغة العربية،
+                بصورة صحيحة.
+            </p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>مثال تطبيقي</h3>
+
+            <p>
+                سننشئ صفحة ويب بسيطة تحتوي على عنوان
+                وفقرة نصية.
+            </p>
+
+            <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;صفحتي الأولى&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;مرحباً بك في موقعي&lt;/h1&gt;
+    &lt;p&gt;أنا أتعلم HTML مع EduZone.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </pre>
+
+            <h4>شكل الصفحة المتوقع:</h4>
+
+            <div class="practice">
+                <h2 style="color:#24577A;">
+                    مرحباً بك في موقعي
+                </h2>
+
+                <p>أنا أتعلم HTML مع EduZone.</p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أخطاء شائعة يجب تجنبها</h3>
+
+            <ul>
+                <li>نسيان كتابة DOCTYPE في بداية الملف.</li>
+                <li>نسيان إغلاق بعض عناصر HTML.</li>
+                <li>كتابة محتوى الصفحة خارج Body.</li>
+                <li>نسيان إضافة UTF-8 عند استخدام اللغة العربية.</li>
+                <li>كتابة عنوان الصفحة داخل Body بدلًا من Head.</li>
+            </ul>
+        </section>
+
+        <section class="lesson-content">
+            <h3>اختبري فهمك</h3>
+
+            <div class="practice">
+
+                <p><strong>السؤال الأول: أين نكتب المحتوى الذي يظهر للمستخدم؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    داخل Head
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    داخل Body
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    داخل Title
+                </label>
+
+                <hr>
+
+                <p><strong>السؤال الثاني: ما وظيفة DOCTYPE؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    إضافة صورة للصفحة
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="1">
+                    تحديد إصدار HTML المستخدم
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    تغيير لون النص
+                </label>
+
+                <button type="button" onclick="checkAnswers()">
+                    اعرفي نتيجتك
+                </button>
+
+                <div id="answer"></div>
+
+            </div>
+        </section>
+
+        <div class="lesson-navigation">
+            <a href="html-lesson1.html">← الدرس السابق</a>
+            <a href="html-course.html">قائمة الدروس</a>
+            <a href="html-lesson3.html">الدرس التالي →</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 2; i++) {
+                let selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected) {
+                    answered++;
+                    score += Number(selected.value);
+                }
+            }
+
+            let answer = document.getElementById("answer");
+
+            if (answered < 2) {
+                answer.innerHTML = "أجيبي عن السؤالين أولاً.";
+                return;
+            }
+
+            answer.innerHTML = "درجتك: " + score + " من 2";
+
+            if (score === 2) {
+                answer.innerHTML += "<p>ممتاز! إجاباتك كلها صحيحة.</p>";
+            } else {
+                answer.innerHTML += "<p>حاولي مراجعة الدرس مرة أخرى.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>

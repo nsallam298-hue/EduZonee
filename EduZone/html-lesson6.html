@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس السادس - النماذج في HTML | EduZone</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F5F7FA;
+            color: #263238;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #19415D;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000010;
+        }
+
+        h2 {
+            color: #24577A;
+        }
+
+        .example {
+            background: #F0F3F6;
+            padding: 15px;
+            border-right: 4px solid #F4B544;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+
+        code {
+            color: #24577A;
+        }
+
+        .demo-form {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+        }
+
+        .demo-form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        .demo-form input,
+        .demo-form select,
+        .demo-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        .demo-form input[type="radio"],
+        .demo-form input[type="checkbox"] {
+            width: auto;
+        }
+
+        .demo-form button,
+        button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover,
+        .demo-form button:hover {
+            background: #19415D;
+        }
+
+        .question {
+            background: #F5F7FA;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .navigation a {
+            background: #24577A;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <p>الدرس السادس: النماذج وحقول إدخال البيانات في HTML</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="materials.html">المحتوى التعليمي</a>
+    <a href="quizzes.html">الاختبارات</a>
+    <a href="contact.html">تواصل معنا</a>
+</nav>
+
+<div class="container">
+
+    <div class="section">
+        <h2>أهداف الدرس</h2>
+        <p>بعد الانتهاء من هذا الدرس ستكون قادرًا على:</p>
+        <ul>
+            <li>التعرف على مفهوم النماذج في HTML.</li>
+            <li>إنشاء حقول إدخال البيانات.</li>
+            <li>استخدام أنواع مختلفة من عناصر الإدخال.</li>
+            <li>إنشاء نموذج تسجيل بيانات بسيط.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>أولًا: ما المقصود بالنماذج Forms؟</h2>
+
+        <p>
+            النماذج هي عناصر داخل صفحات الويب تسمح للمستخدم بإدخال البيانات
+            وإرسالها، مثل الاسم والبريد الإلكتروني وكلمة المرور.
+        </p>
+
+        <p>تستخدم النماذج في:</p>
+
+        <ul>
+            <li>تسجيل الدخول إلى المواقع.</li>
+            <li>إنشاء حساب جديد.</li>
+            <li>إرسال الرسائل والاستفسارات.</li>
+            <li>تسجيل الطلاب في الدورات التعليمية.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>ثانيًا: العنصر Form</h2>
+
+        <p>
+            نستخدم العنصر <code>&lt;form&gt;</code> لإنشاء نموذج يحتوي
+            على حقول إدخال البيانات.
+        </p>
+
+        <div class="example">
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;اكتب اسمك:<br>
+            &nbsp;&nbsp;&lt;input type="text"&gt;<br>
+            &nbsp;&nbsp;&lt;button type="submit"&gt;إرسال&lt;/button&gt;<br>
+            &lt;/form&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ثالثًا: أنواع حقول الإدخال Input</h2>
+
+        <p>يوفر HTML أنواعًا متعددة من حقول الإدخال، ومنها:</p>
+
+        <ul>
+            <li><code>text</code>: لإدخال النصوص.</li>
+            <li><code>password</code>: لإدخال كلمة المرور.</li>
+            <li><code>email</code>: لإدخال البريد الإلكتروني.</li>
+            <li><code>number</code>: لإدخال الأرقام.</li>
+            <li><code>date</code>: لاختيار التاريخ.</li>
+            <li><code>radio</code>: لاختيار إجابة واحدة من مجموعة.</li>
+            <li><code>checkbox</code>: لاختيار عنصر واحد أو أكثر.</li>
+            <li><code>submit</code>: لإرسال النموذج.</li>
+        </ul>
+
+        <div class="example">
+            &lt;input type="text" placeholder="الاسم"&gt;<br>
+            &lt;input type="email" placeholder="البريد الإلكتروني"&gt;<br>
+            &lt;input type="password" placeholder="كلمة المرور"&gt;<br>
+            &lt;input type="number"&gt;<br>
+            &lt;input type="date"&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>رابعًا: عناصر أخرى داخل النماذج</h2>
+
+        <h3>1- Label</h3>
+        <p>
+            يستخدم العنصر <code>&lt;label&gt;</code> لكتابة وصف أو عنوان
+            لحقل الإدخال.
+        </p>
+
+        <div class="example">
+            &lt;label for="username"&gt;الاسم:&lt;/label&gt;<br>
+            &lt;input type="text" id="username"&gt;
+        </div>
+
+        <h3>2- Select</h3>
+        <p>يستخدم لإنشاء قائمة منسدلة تسمح للمستخدم باختيار عنصر.</p>
+
+        <div class="example">
+            &lt;select&gt;<br>
+            &nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br>
+            &lt;/select&gt;
+        </div>
+
+        <h3>3- Textarea</h3>
+        <p>يستخدم لإدخال نصوص طويلة أو رسائل.</p>
+
+        <div class="example">
+            &lt;textarea rows="4"&gt;&lt;/textarea&gt;
+        </div>
+
+        <h3>4- Button</h3>
+        <p>يستخدم لإنشاء زر لتنفيذ إجراء معين.</p>
+
+        <div class="example">
+            &lt;button type="submit"&gt;إرسال&lt;/button&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>خامسًا: مثال عملي على نموذج تسجيل</h2>
+
+        <p>هذا نموذج تجريبي لتسجيل طالب في منصة EduZone:</p>
+
+        <form class="demo-form" onsubmit="event.preventDefault(); document.getElementById('form-message').textContent='تم إرسال النموذج التجريبي بنجاح!';">
+
+            <label for="student-name">الاسم بالكامل:</label>
+            <input type="text" id="student-name" placeholder="اكتب اسمك" required>
+
+            <label for="student-email">البريد الإلكتروني:</label>
+            <input type="email" id="student-email" placeholder="example@email.com" required>
+
+            <label for="student-password">كلمة المرور:</label>
+            <input type="password" id="student-password" placeholder="اكتب كلمة المرور" required>
+
+            <label for="student-age">العمر:</label>
+            <input type="number" id="student-age" min="1" max="100">
+
+            <label for="student-date">تاريخ التسجيل:</label>
+            <input type="date" id="student-date">
+
+            <label>النوع:</label>
+            <input type="radio" name="gender" value="male"> ذكر
+            <input type="radio" name="gender" value="female"> أنثى
+
+            <label for="student-course">اختر الدورة:</label>
+            <select id="student-course">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
+
+            <label for="student-message">ملاحظات:</label>
+            <textarea id="student-message" rows="4" placeholder="اكتب ملاحظاتك هنا"></textarea>
+
+            <label>
+                <input type="checkbox" required>
+                أوافق على الشروط والأحكام
+            </label>
+
+            <button type="submit">تسجيل البيانات</button>
+
+            <p id="form-message"></p>
+        </form>
+
+        <p>
+            ملحوظة: النموذج هنا تجريبي؛ يعرض رسالة تأكيد فقط ولا يحفظ
+            البيانات في قاعدة بيانات.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>سادسًا: أهم خصائص النماذج</h2>
+
+        <ul>
+            <li><code>placeholder</code>: تعرض نصًا إرشاديًا داخل الحقل.</li>
+            <li><code>required</code>: تجعل إدخال البيانات إلزاميًا.</li>
+            <li><code>value</code>: تحدد قيمة افتراضية للحقل.</li>
+            <li><code>name</code>: تحدد اسم الحقل عند إرسال البيانات.</li>
+            <li><code>id</code>: تعطي الحقل معرفًا مميزًا داخل الصفحة.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>اختبر معلوماتك</h2>
+
+        <div class="question">
+            <p>1- ما العنصر المستخدم لإنشاء نموذج في HTML؟</p>
+            <label><input type="radio" name="q1" value="a"> table</label><br>
+            <label><input type="radio" name="q1" value="b"> form</label><br>
+            <label><input type="radio" name="q1" value="c"> img</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما نوع الإدخال المستخدم لكلمة المرور؟</p>
+            <label><input type="radio" name="q2" value="a"> text</label><br>
+            <label><input type="radio" name="q2" value="b"> email</label><br>
+            <label><input type="radio" name="q2" value="c"> password</label>
+        </div>
+
+        <div class="question">
+            <p>3- ما العنصر المستخدم لإنشاء قائمة منسدلة؟</p>
+            <label><input type="radio" name="q3" value="a"> select</label><br>
+            <label><input type="radio" name="q3" value="b"> textarea</label><br>
+            <label><input type="radio" name="q3" value="c"> label</label>
+        </div>
+
+        <button onclick="checkAnswers()">عرض النتيجة</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="navigation">
+        <a href="html-lesson5.html">الدرس السابق</a>
+        <a href="html-course.html">قائمة الدروس</a>
+        <a href="materials.html">العودة للمحتوى التعليمي</a>
+    </div>
+
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © EduZone 2026
+</footer>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+
+        if (document.querySelector('input[name="q1"]:checked')?.value === "b") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q2"]:checked')?.value === "c") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q3"]:checked')?.value === "a") {
+            score++;
+        }
+
+        document.getElementById("result").textContent =
+            "نتيجتك: " + score + " من 3";
+    }
+</script>
+
+</body>
+</html>

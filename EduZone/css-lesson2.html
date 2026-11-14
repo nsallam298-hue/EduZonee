@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثاني: تنسيق العناصر | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            color: #24577A;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .lesson-section h2 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .lesson-section p,
+        .lesson-section li {
+            line-height: 2;
+            color: #333;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .question {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .check-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="materials.html">المحتوى التعليمي</a>
+        <a href="quizzes.html">الاختبارات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>الدرس الثاني: تنسيق العناصر</h1>
+        <p>تعلمي كيفية التحكم في ألوان النصوص والخلفيات والخطوط والمسافات.</p>
+    </div>
+
+    <section class="lesson-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>التعرف على خصائص الألوان والخلفيات.</li>
+            <li>التحكم في نوع الخط وحجمه وشكله.</li>
+            <li>التعرف على خصائص الحدود.</li>
+            <li>فهم نموذج الصندوق Box Model.</li>
+            <li>التمييز بين Margin وPadding.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>أولًا: الألوان والخلفيات</h2>
+
+        <p>
+            توفر CSS مجموعة من الخصائص التي تساعدنا على تغيير ألوان
+            العناصر والخلفيات داخل صفحة الويب.
+        </p>
+
+        <h3>خاصية Color</h3>
+        <p>تستخدم لتغيير لون النص.</p>
+
+        <pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+        <h3>خاصية Background-color</h3>
+        <p>تستخدم لتغيير لون خلفية العنصر.</p>
+
+        <pre><code>body {
+    background-color: lightblue;
+}</code></pre>
+
+        <h3>خاصية Background-image</h3>
+        <p>تستخدم لإضافة صورة كخلفية للعنصر.</p>
+
+        <pre><code>body {
+    background-image: url("background.jpg");
+}</code></pre>
+
+        <div class="example-box">
+            <h3 style="color: #24577A;">مثال على تغيير اللون</h3>
+            <p style="background-color: #F4B544; padding: 12px;">
+                هذه فقرة بخلفية ذهبية.
+            </p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثانيًا: تنسيق النصوص والخطوط</h2>
+
+        <p>يمكن التحكم في شكل النصوص باستخدام خصائص مختلفة، منها:</p>
+
+        <ul>
+            <li><strong>Font-size:</strong> لتحديد حجم الخط.</li>
+            <li><strong>Font-family:</strong> لتحديد نوع الخط.</li>
+            <li><strong>Font-weight:</strong> لتحديد سمك الخط.</li>
+            <li><strong>Text-align:</strong> لتحديد محاذاة النص.</li>
+            <li><strong>Text-decoration:</strong> لإضافة خط أسفل النص أو إزالته.</li>
+        </ul>
+
+        <pre><code>h2 {
+    font-size: 28px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    text-decoration: underline;
+}</code></pre>
+
+        <div class="example-box">
+            <h2 style="text-align:center; font-size:28px; color:#24577A;">
+                عنوان تجريبي
+            </h2>
+            <p style="text-decoration: underline;">
+                نص تحته خط باستخدام CSS.
+            </p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثالثًا: الحدود Border</h2>
+
+        <p>
+            تستخدم خاصية Border لإضافة حدود حول العناصر، ويمكن تحديد
+            سمك الحدود ونوعها ولونها.
+        </p>
+
+        <pre><code>div {
+    border: 2px solid blue;
+}</code></pre>
+
+        <p>ومن أنواع الحدود:</p>
+        <ul>
+            <li>Solid: خط متصل.</li>
+            <li>Dashed: خط متقطع.</li>
+            <li>Dotted: نقاط متتابعة.</li>
+            <li>Double: خط مزدوج.</li>
+        </ul>
+
+        <div class="example-box" style="border: 3px dashed #24577A;">
+            هذا مثال على حدود متقطعة حول عنصر.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>رابعًا: نموذج الصندوق Box Model</h2>
+
+        <p>
+            تتعامل CSS مع كل عنصر في صفحة الويب باعتباره صندوقًا،
+            ويتكون هذا الصندوق من أربعة أجزاء أساسية:
+        </p>
+
+        <ul>
+            <li><strong>Content:</strong> المحتوى الموجود داخل العنصر.</li>
+            <li><strong>Padding:</strong> المسافة الداخلية بين المحتوى والحدود.</li>
+            <li><strong>Border:</strong> الحدود المحيطة بالعنصر.</li>
+            <li><strong>Margin:</strong> المسافة الخارجية بين العنصر والعناصر الأخرى.</li>
+        </ul>
+
+        <pre><code>.box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 15px;
+}</code></pre>
+
+        <div class="example-box">
+            <div style="
+                background:#F4B544;
+                padding:20px;
+                border:5px solid #24577A;
+                margin:15px;
+                text-align:center;
+            ">
+                Content
+            </div>
+            <p>المثال يوضح المسافة الداخلية والحدود والمسافة الخارجية.</p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>خامسًا: الفرق بين Margin وPadding</h2>
+
+        <p><strong>Margin:</strong> مسافة خارج العنصر تفصله عن العناصر الأخرى.</p>
+        <p><strong>Padding:</strong> مسافة داخل العنصر بين المحتوى والحدود.</p>
+
+        <pre><code>.card {
+    margin: 20px;
+    padding: 15px;
+}</code></pre>
+    </section>
+
+    <section class="lesson-section">
+        <h2>اختبر فهمك</h2>
+
+        <div class="question">
+            <p>1- ما الخاصية المستخدمة لتغيير لون النص؟</p>
+            <label><input type="radio" name="q1" value="a"> background-color</label><br>
+            <label><input type="radio" name="q1" value="b"> color</label><br>
+            <label><input type="radio" name="q1" value="c"> margin</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما الخاصية المسؤولة عن المسافة الداخلية للعنصر؟</p>
+            <label><input type="radio" name="q2" value="a"> padding</label><br>
+            <label><input type="radio" name="q2" value="b"> margin</label><br>
+            <label><input type="radio" name="q2" value="c"> border</label>
+        </div>
+
+        <div class="question">
+            <p>3- أي جزء يمثل الحدود المحيطة بالعنصر؟</p>
+            <label><input type="radio" name="q3" value="a"> Content</label><br>
+            <label><input type="radio" name="q3" value="b"> Margin</label><br>
+            <label><input type="radio" name="q3" value="c"> Border</label>
+        </div>
+
+        <button class="check-btn" onclick="checkAnswers()">تصحيح الإجابات</button>
+        <p id="result"></p>
+    </section>
+
+    <div class="lesson-navigation">
+        <a href="css-lesson1.html">→ الدرس السابق</a>
+        <a href="css-lesson3.html">الدرس التالي ←</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © EduZone 2026</p>
+</footer>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "c"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        result.textContent = "درجتك: " + score + " من 3";
+
+        if (score === 3) {
+            result.style.color = "green";
+            result.textContent += " - ممتاز! كل إجاباتك صحيحة.";
+        } else {
+            result.style.color = "#c0392b";
+            result.textContent += " - حاولي مرة أخرى.";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحتوى التعليمي | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .materials-page {
+            width: 90%;
+            max-width: 1150px;
+            margin: 45px auto;
+        }
+
+        .materials-hero {
+            background: linear-gradient(135deg, #24577A, #397FA8);
+            color: white;
+            padding: 45px 25px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .materials-hero h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .materials-hero p {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .section-title {
+            color: #24577A;
+            font-size: 25px;
+            margin: 35px 0 20px;
+            border-right: 5px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.09);
+            border: 1px solid #e7edf2;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+        }
+
+        .course-top {
+            padding: 25px;
+            text-align: center;
+            background: #EAF2F8;
+        }
+
+        .course-top span {
+            font-size: 45px;
+            font-weight: bold;
+            color: #24577A;
+        }
+
+        .course-content {
+            padding: 22px;
+        }
+
+        .course-content h3 {
+            color: #24577A;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .course-content p {
+            color: #555;
+            line-height: 1.8;
+            min-height: 55px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 18px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .course-button {
+            display: block;
+            text-align: center;
+            background: #24577A;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .course-button:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+
+        .resources-box {
+            background: #FFF7E6;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+            line-height: 2;
+        }
+
+        .resources-box h3 {
+            color: #24577A;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .materials-hero h2 {
+                font-size: 24px;
+            }
+
+            .materials-page {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="materials-page">
+
+        <section class="materials-hero">
+            <h2>اكتشفي عالم البرمجة مع EduZone</h2>
+            <p>
+                ابدئي رحلتك التعليمية وتعلمي أساسيات تصميم
+                وتطوير مواقع الويب من خلال دروس منظمة
+                وأمثلة عملية تناسب المبتدئين.
+            </p>
+        </section>
+
+        <h2 class="section-title">مسارات التعلم</h2>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <div class="course-top">
+                    <span>HTML</span>
+                </div>
+
+                <div class="course-content">
+                    <h3>تعلم HTML</h3>
+                    <p>
+                        تعرفي على أساسيات بناء صفحات الويب
+                        وإضافة النصوص والصور والروابط والجداول.
+                    </p>
+
+                    <div class="course-info">
+                        <span>6 دروس</span>
+                        <span>مستوى مبتدئ</span>
+                    </div>
+
+                    <a href="html-course.html" class="course-button">
+                        استكشفي الدروس
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-top">
+                    <span>CSS</span>
+                </div>
+
+                <div class="course-content">
+                    <h3>تعلم CSS</h3>
+                    <p>
+                        تعلمي كيفية تنسيق صفحات الويب
+                        والتحكم في الألوان والخطوط والتصميم.
+                    </p>
+
+                    <div class="course-info">
+                        <span>6 دروس</span>
+                        <span>مستوى مبتدئ</span>
+                    </div>
+
+                    <a href="css-course.html" class="course-button">
+                        استكشفي الدروس
+                    </a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-top">
+                    <span>JS</span>
+                </div>
+
+                <div class="course-content">
+                    <h3>تعلم JavaScript</h3>
+                    <p>
+                        اكتشفي أساسيات البرمجة وكيفية إضافة
+                        التفاعل والحركة إلى صفحات الويب.
+                    </p>
+
+                    <div class="course-info">
+                        <span>6 دروس</span>
+                        <span>مستوى مبتدئ</span>
+                    </div>
+
+                    <a href="js-course.html" class="course-button">
+                        استكشفي الدروس
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="resources-box">
+            <h3>لماذا تتعلمين من EduZone؟</h3>
+
+            <p>
+                • دروس مرتبة من الأساسيات إلى الموضوعات المتقدمة.
+            </p>
+
+            <p>
+                • أمثلة عملية تساعدك على فهم الأكواد.
+            </p>
+
+            <p>
+                • محتوى مناسب للطلاب والمبتدئين.
+            </p>
+
+            <p>
+                • اختبارات تعليمية لقياس مستوى تقدمك.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+</body>
+</html>

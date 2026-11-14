@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثالث: تصميم صفحات الويب | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            color: #24577A;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .lesson-section h2 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .lesson-section p,
+        .lesson-section li {
+            line-height: 2;
+            color: #333;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .flex-demo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            background: #e5edf3;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .flex-demo div {
+            background: #24577A;
+            color: white;
+            padding: 18px;
+            border-radius: 6px;
+        }
+
+        .grid-demo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-demo div {
+            background: #F4B544;
+            padding: 20px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .question {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .check-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .grid-demo {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .flex-demo {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="materials.html">المحتوى التعليمي</a>
+        <a href="quizzes.html">الاختبارات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>الدرس الثالث: تصميم صفحات الويب</h1>
+        <p>تعلمي كيفية ترتيب العناصر وإنشاء تصميم متجاوب باستخدام CSS.</p>
+    </div>
+
+    <section class="lesson-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>التعرف على Flexbox واستخداماته.</li>
+            <li>التعرف على CSS Grid.</li>
+            <li>فهم مفهوم التصميم المتجاوب Responsive Design.</li>
+            <li>إنشاء تخطيط بسيط لصفحة ويب.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>أولًا: ما هو Flexbox؟</h2>
+
+        <p>
+            Flexbox هو نظام تخطيط في CSS يساعد على ترتيب العناصر
+            داخل الحاوية والتحكم في توزيع المساحات بينها.
+        </p>
+
+        <p>من أهم خصائص Flexbox:</p>
+
+        <ul>
+            <li><strong>display: flex:</strong> تفعيل نظام Flexbox.</li>
+            <li><strong>justify-content:</strong> التحكم في توزيع العناصر أفقيًا.</li>
+            <li><strong>align-items:</strong> محاذاة العناصر على المحور الآخر.</li>
+            <li><strong>flex-direction:</strong> تحديد اتجاه ترتيب العناصر.</li>
+            <li><strong>flex-wrap:</strong> السماح للعناصر بالانتقال إلى سطر جديد.</li>
+        </ul>
+
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}</code></pre>
+
+        <div class="example-box">
+            <h3>مثال عملي على Flexbox</h3>
+            <div class="flex-demo">
+                <div>عنصر 1</div>
+                <div>عنصر 2</div>
+                <div>عنصر 3</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثانيًا: ما هو CSS Grid؟</h2>
+
+        <p>
+            CSS Grid هو نظام تخطيط يُستخدم لإنشاء تصميمات تعتمد
+            على الصفوف والأعمدة، ويساعد في تنظيم العناصر داخل الصفحة.
+        </p>
+
+        <p>من أهم خصائصه:</p>
+
+        <ul>
+            <li><strong>display: grid:</strong> تفعيل نظام Grid.</li>
+            <li><strong>grid-template-columns:</strong> تحديد عدد الأعمدة وأحجامها.</li>
+            <li><strong>grid-template-rows:</strong> تحديد الصفوف.</li>
+            <li><strong>gap:</strong> تحديد المسافات بين العناصر.</li>
+        </ul>
+
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}</code></pre>
+
+        <div class="example-box">
+            <h3>مثال عملي على Grid</h3>
+            <div class="grid-demo">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثالثًا: التصميم المتجاوب Responsive Design</h2>
+
+        <p>
+            التصميم المتجاوب هو أسلوب يجعل صفحة الويب تتكيف مع
+            أحجام الشاشات المختلفة، مثل الكمبيوتر والتابلت والموبايل.
+        </p>
+
+        <p>
+            نستخدم Media Queries لتغيير شكل التصميم حسب عرض الشاشة.
+        </p>
+
+        <pre><code>@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+
+        <p>
+            في المثال السابق، عندما يصبح عرض الشاشة 600 بكسل أو أقل،
+            تتحول الأعمدة إلى عمود واحد.
+        </p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>رابعًا: تطبيق عملي</h2>
+
+        <p>
+            لننشئ مجموعة بطاقات باستخدام Grid، مع تغيير عدد الأعمدة
+            حسب حجم الشاشة.
+        </p>
+
+        <pre><code>&lt;div class="cards"&gt;
+    &lt;div&gt;HTML&lt;/div&gt;
+    &lt;div&gt;CSS&lt;/div&gt;
+    &lt;div&gt;JavaScript&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <pre><code>.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cards div {
+    background: #24577A;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+
+        <div class="example-box">
+            <h3>شكل البطاقات</h3>
+            <div class="grid-demo">
+                <div style="background:#24577A;color:white;">HTML</div>
+                <div style="background:#24577A;color:white;">CSS</div>
+                <div style="background:#24577A;color:white;">JavaScript</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>اختبر فهمك</h2>
+
+        <div class="question">
+            <p>1- ما الخاصية المستخدمة لتفعيل Flexbox؟</p>
+            <label><input type="radio" name="q1" value="a"> display: grid</label><br>
+            <label><input type="radio" name="q1" value="b"> display: flex</label><br>
+            <label><input type="radio" name="q1" value="c"> position: absolute</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما النظام الذي يعتمد على الصفوف والأعمدة؟</p>
+            <label><input type="radio" name="q2" value="a"> CSS Grid</label><br>
+            <label><input type="radio" name="q2" value="b"> Inline CSS</label><br>
+            <label><input type="radio" name="q2" value="c"> Margin</label>
+        </div>
+
+        <div class="question">
+            <p>3- ما الخاصية المستخدمة لإنشاء تصميم يتكيف مع أحجام الشاشات؟</p>
+            <label><input type="radio" name="q3" value="a"> Border</label><br>
+            <label><input type="radio" name="q3" value="b"> Font-size</label><br>
+            <label><input type="radio" name="q3" value="c"> Media Queries</label>
+        </div>
+
+        <button class="check-btn" onclick="checkAnswers()">تصحيح الإجابات</button>
+        <p id="result"></p>
+    </section>
+
+    <div class="lesson-navigation">
+        <a href="css-lesson2.html">→ الدرس السابق</a>
+        <a href="css-course.html">العودة إلى دورة CSS</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © EduZone 2026</p>
+</footer>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "c"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        result.textContent = "درجتك: " + score + " من 3";
+
+        if (score === 3) {
+            result.style.color = "green";
+            result.textContent += " - ممتاز! كل إجاباتك صحيحة.";
+        } else {
+            result.style.color = "#c0392b";
+            result.textContent += " - حاولي مرة أخرى.";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الأول: أساسيات JavaScript | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            color: #24577A;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .lesson-section h2 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .lesson-section p,
+        .lesson-section li {
+            line-height: 2;
+            color: #333;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .question {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .check-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="materials.html">المحتوى التعليمي</a>
+        <a href="quizzes.html">الاختبارات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>الدرس الأول: أساسيات JavaScript</h1>
+        <p>تعلمي أساسيات البرمجة باستخدام JavaScript وإضافة التفاعل إلى صفحات الويب.</p>
+    </div>
+
+    <section class="lesson-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>التعرف على لغة JavaScript وأهميتها.</li>
+            <li>معرفة كيفية إضافة JavaScript إلى صفحة HTML.</li>
+            <li>التعرف على المتغيرات وطرق تعريفها.</li>
+            <li>فهم أنواع البيانات الأساسية.</li>
+            <li>كتابة أوامر برمجية بسيطة.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>أولًا: ما هي JavaScript؟</h2>
+
+        <p>
+            JavaScript هي لغة برمجة تُستخدم لإضافة التفاعل والحركة
+            والوظائف المختلفة إلى صفحات الويب.
+        </p>
+
+        <p>تساعدنا JavaScript على:</p>
+
+        <ul>
+            <li>إظهار رسائل للمستخدم.</li>
+            <li>الاستجابة للنقر على الأزرار.</li>
+            <li>التحقق من البيانات المدخلة في النماذج.</li>
+            <li>تغيير محتوى الصفحة دون إعادة تحميلها.</li>
+            <li>إنشاء اختبارات وألعاب تفاعلية.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثانيًا: طرق إضافة JavaScript</h2>
+
+        <h3>1- Internal JavaScript</h3>
+        <p>نكتب الكود داخل وسم script في صفحة HTML.</p>
+
+        <pre><code>&lt;script&gt;
+    alert("Welcome to EduZone");
+&lt;/script&gt;</code></pre>
+
+        <h3>2- External JavaScript</h3>
+        <p>
+            نكتب الكود في ملف خارجي بامتداد js، ثم نربطه بصفحة HTML.
+        </p>
+
+        <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+        <p>
+            وتُعد الطريقة الخارجية مناسبة لتنظيم الأكواد وإعادة استخدامها
+            في أكثر من صفحة.
+        </p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثالثًا: المتغيرات Variables</h2>
+
+        <p>
+            المتغير هو مكان في الذاكرة نستخدمه لتخزين البيانات
+            حتى نتمكن من استخدامها أثناء تنفيذ البرنامج.
+        </p>
+
+        <p>هناك ثلاث كلمات أساسية لتعريف المتغيرات:</p>
+
+        <ul>
+            <li><strong>let:</strong> لتعريف متغير يمكن تغيير قيمته.</li>
+            <li><strong>const:</strong> لتعريف متغير لا يمكن إعادة إسناد قيمة جديدة له.</li>
+            <li><strong>var:</strong> طريقة قديمة لتعريف المتغيرات.</li>
+        </ul>
+
+        <pre><code>let studentName = "Nada";
+
+const age = 20;
+
+var city = "Fayoum";</code></pre>
+
+        <p>مثال على تغيير قيمة متغير:</p>
+
+        <pre><code>let score = 10;
+
+score = 20;
+
+console.log(score);</code></pre>
+
+        <div class="example-box">
+            <p>الناتج المتوقع من المثال السابق:</p>
+            <strong>20</strong>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>رابعًا: أنواع البيانات Data Types</h2>
+
+        <p>تتعامل JavaScript مع أنواع مختلفة من البيانات، ومنها:</p>
+
+        <h3>1- String</h3>
+        <p>تستخدم لتخزين النصوص.</p>
+        <pre><code>let name = "Ahmed";</code></pre>
+
+        <h3>2- Number</h3>
+        <p>تستخدم لتخزين الأرقام.</p>
+        <pre><code>let age = 21;
+let price = 50.5;</code></pre>
+
+        <h3>3- Boolean</h3>
+        <p>تستخدم لتخزين إحدى قيمتين: true أو false.</p>
+        <pre><code>let isStudent = true;</code></pre>
+
+        <h3>4- Undefined</h3>
+        <p>تظهر عندما يتم تعريف متغير دون إعطائه قيمة.</p>
+        <pre><code>let result;</code></pre>
+
+        <h3>5- Null</h3>
+        <p>تستخدم للتعبير عن عدم وجود قيمة مقصودة.</p>
+        <pre><code>let user = null;</code></pre>
+    </section>
+
+    <section class="lesson-section">
+        <h2>خامسًا: عرض النتائج</h2>
+
+        <p>يمكن استخدام عدة طرق لعرض النتائج أثناء كتابة الكود.</p>
+
+        <ul>
+            <li><strong>console.log():</strong> لعرض النتائج في وحدة التحكم.</li>
+            <li><strong>alert():</strong> لإظهار رسالة منبثقة.</li>
+            <li><strong>document.write():</strong> لكتابة محتوى داخل الصفحة.</li>
+        </ul>
+
+        <pre><code>let name = "Nada";
+
+console.log(name);
+
+alert("Welcome to EduZone");</code></pre>
+
+        <div class="example-box">
+            <h3>جربي المثال</h3>
+            <button onclick="showMessage()" style="
+                background:#24577A;
+                color:white;
+                border:none;
+                padding:12px 20px;
+                border-radius:7px;
+                cursor:pointer;
+            ">اضغطي هنا</button>
+
+            <p id="demoResult"></p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>اختبر فهمك</h2>
+
+        <div class="question">
+            <p>1- ما اللغة المستخدمة لإضافة التفاعل إلى صفحات الويب؟</p>
+            <label><input type="radio" name="q1" value="a"> HTML</label><br>
+            <label><input type="radio" name="q1" value="b"> CSS</label><br>
+            <label><input type="radio" name="q1" value="c"> JavaScript</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما الكلمة المستخدمة لتعريف متغير يمكن تغيير قيمته؟</p>
+            <label><input type="radio" name="q2" value="a"> let</label><br>
+            <label><input type="radio" name="q2" value="b"> const</label><br>
+            <label><input type="radio" name="q2" value="c"> alert</label>
+        </div>
+
+        <div class="question">
+            <p>3- أي نوع من البيانات يستخدم لتخزين النصوص؟</p>
+            <label><input type="radio" name="q3" value="a"> Number</label><br>
+            <label><input type="radio" name="q3" value="b"> String</label><br>
+            <label><input type="radio" name="q3" value="c"> Boolean</label>
+        </div>
+
+        <button class="check-btn" onclick="checkAnswers()">تصحيح الإجابات</button>
+        <p id="result"></p>
+    </section>
+
+    <div class="lesson-navigation">
+        <a href="js-course.html">العودة إلى دورة JavaScript</a>
+        <a href="js-lesson2.html">الدرس التالي ←</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © EduZone 2026</p>
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("demoResult").textContent =
+            "أهلًا بك في EduZone! JavaScript تجعل صفحات الويب تفاعلية.";
+    }
+
+    function checkAnswers() {
+        const answers = {
+            q1: "c",
+            q2: "a",
+            q3: "b"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        result.textContent = "درجتك: " + score + " من 3";
+
+        if (score === 3) {
+            result.style.color = "green";
+            result.textContent += " - ممتاز! كل إجاباتك صحيحة.";
+        } else {
+            result.style.color = "#c0392b";
+            result.textContent += " - حاولي مرة أخرى.";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الخامس - القوائم والجداول | EduZone</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F5F7FA;
+            color: #263238;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #19415D;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000010;
+        }
+
+        h2 {
+            color: #24577A;
+        }
+
+        .example {
+            background: #F0F3F6;
+            padding: 15px;
+            border-right: 4px solid #F4B544;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+
+        code {
+            color: #24577A;
+        }
+
+        .demo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .demo-table th,
+        .demo-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .demo-table th {
+            background: #24577A;
+            color: white;
+        }
+
+        .demo-table tr:nth-child(even) {
+            background: #F0F3F6;
+        }
+
+        .question {
+            background: #F5F7FA;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #19415D;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .navigation a {
+            background: #24577A;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <p>الدرس الخامس: القوائم والجداول في HTML</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="materials.html">المحتوى التعليمي</a>
+    <a href="quizzes.html">الاختبارات</a>
+    <a href="contact.html">تواصل معنا</a>
+</nav>
+
+<div class="container">
+
+    <div class="section">
+        <h2>أهداف الدرس</h2>
+        <p>بعد الانتهاء من هذا الدرس ستكون قادرًا على:</p>
+        <ul>
+            <li>التعرف على أنواع القوائم في HTML.</li>
+            <li>إنشاء قوائم مرتبة وغير مرتبة.</li>
+            <li>إنشاء الجداول وتنظيم البيانات داخلها.</li>
+            <li>استخدام عناصر الصفوف والخلايا والعناوين.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>أولًا: القوائم في HTML</h2>
+
+        <p>
+            تستخدم القوائم لتنظيم مجموعة من العناصر وعرضها بطريقة واضحة
+            وسهلة القراءة.
+        </p>
+
+        <h3>1- القائمة غير المرتبة</h3>
+
+        <p>
+            نستخدم العنصر <code>&lt;ul&gt;</code> لإنشاء قائمة غير مرتبة،
+            ويظهر بجانب كل عنصر رمز نقطي.
+        </p>
+
+        <p>نستخدم العنصر <code>&lt;li&gt;</code> لكتابة كل عنصر داخل القائمة.</p>
+
+        <div class="example">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;CSS&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;JavaScript&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </div>
+
+        <p>مثال على شكل القائمة:</p>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h3>2- القائمة المرتبة</h3>
+
+        <p>
+            نستخدم العنصر <code>&lt;ol&gt;</code> لإنشاء قائمة مرتبة،
+            وتظهر العناصر بترتيب رقمي افتراضيًا.
+        </p>
+
+        <div class="example">
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;فتح VS Code&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;إنشاء ملف HTML&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;كتابة الكود&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </div>
+
+        <p>مثال على شكل القائمة:</p>
+
+        <ol>
+            <li>فتح VS Code</li>
+            <li>إنشاء ملف HTML</li>
+            <li>كتابة الكود</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>ثانيًا: الفرق بين القوائم المرتبة وغير المرتبة</h2>
+
+        <ul>
+            <li><code>ul</code>: قائمة غير مرتبة تظهر بعلامات نقطية.</li>
+            <li><code>ol</code>: قائمة مرتبة تظهر بأرقام أو أنواع ترقيم أخرى.</li>
+            <li><code>li</code>: عنصر داخل القائمة، ويستخدم مع النوعين.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>ثالثًا: الجداول في HTML</h2>
+
+        <p>
+            تستخدم الجداول لتنظيم البيانات في صفوف وأعمدة،
+            مثل جداول الطلاب والدرجات والمنتجات.
+        </p>
+
+        <p>أهم عناصر إنشاء الجدول:</p>
+
+        <ul>
+            <li><code>table</code>: لإنشاء الجدول.</li>
+            <li><code>tr</code>: لإنشاء صف داخل الجدول.</li>
+            <li><code>th</code>: لإنشاء خلية عنوان.</li>
+            <li><code>td</code>: لإنشاء خلية بيانات.</li>
+        </ul>
+
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;الاسم&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;الدرجة&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;أحمد&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;90&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+
+        <h3>مثال عملي على جدول:</h3>
+
+        <table class="demo-table">
+            <tr>
+                <th>اسم الطالب</th>
+                <th>المادة</th>
+                <th>الدرجة</th>
+            </tr>
+            <tr>
+                <td>أحمد</td>
+                <td>HTML</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>سارة</td>
+                <td>CSS</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>محمد</td>
+                <td>JavaScript</td>
+                <td>85</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>رابعًا: دمج الخلايا في الجداول</h2>
+
+        <p>
+            يمكن دمج أكثر من خلية داخل الجدول باستخدام خصائص معينة:
+        </p>
+
+        <ul>
+            <li><code>colspan</code>: لدمج أكثر من عمود في خلية واحدة.</li>
+            <li><code>rowspan</code>: لدمج أكثر من صف في خلية واحدة.</li>
+        </ul>
+
+        <h3>مثال على دمج الأعمدة:</h3>
+
+        <div class="example">
+            &lt;table border="1"&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th colspan="2"&gt;بيانات الطالب&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;الاسم&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;أحمد&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+
+        <p>في هذا المثال، تم دمج عمودين في خلية عنوان واحدة.</p>
+    </div>
+
+    <div class="section">
+        <h2>خامسًا: تطبيق عملي</h2>
+
+        <p>
+            أنشئ صفحة HTML تحتوي على قائمة بالمواد التعليمية
+            وجدول بأسماء الطلاب ودرجاتهم.
+        </p>
+
+        <div class="example">
+            &lt;h2&gt;المواد التعليمية&lt;/h2&gt;<br>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;CSS&lt;/li&gt;<br>
+            &lt;/ul&gt;<br><br>
+
+            &lt;h2&gt;درجات الطلاب&lt;/h2&gt;<br>
+            &lt;table border="1"&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;الاسم&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;الدرجة&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;سارة&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;95&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>اختبر معلوماتك</h2>
+
+        <div class="question">
+            <p>1- ما العنصر المستخدم لإنشاء قائمة غير مرتبة؟</p>
+            <label><input type="radio" name="q1" value="a"> ol</label><br>
+            <label><input type="radio" name="q1" value="b"> ul</label><br>
+            <label><input type="radio" name="q1" value="c"> table</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما العنصر المستخدم لإنشاء صف داخل الجدول؟</p>
+            <label><input type="radio" name="q2" value="a"> tr</label><br>
+            <label><input type="radio" name="q2" value="b"> td</label><br>
+            <label><input type="radio" name="q2" value="c"> li</label>
+        </div>
+
+        <div class="question">
+            <p>3- ما الخاصية المستخدمة لدمج الأعمدة؟</p>
+            <label><input type="radio" name="q3" value="a"> rowspan</label><br>
+            <label><input type="radio" name="q3" value="b"> colspan</label><br>
+            <label><input type="radio" name="q3" value="c"> href</label>
+        </div>
+
+        <button onclick="checkAnswers()">عرض النتيجة</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="navigation">
+        <a href="html-lesson4.html">الدرس السابق</a>
+        <a href="html-course.html">قائمة الدروس</a>
+        <a href="html-lesson6.html">الدرس التالي</a>
+    </div>
+
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © EduZone 2026
+</footer>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+
+        if (document.querySelector('input[name="q1"]:checked')?.value === "b") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q2"]:checked')?.value === "a") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q3"]:checked')?.value === "b") {
+            score++;
+        }
+
+        document.getElementById("result").textContent =
+            "نتيجتك: " + score + " من 3";
+    }
+</script>
+
+</body>
+</html>

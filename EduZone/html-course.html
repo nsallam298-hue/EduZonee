@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورة HTML | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .course-page {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .course-hero {
+            background: linear-gradient(135deg, #24577A, #397FA8);
+            color: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .course-hero h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .course-hero p {
+            line-height: 1.9;
+        }
+
+        .course-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .course-details span {
+            background: rgba(255,255,255,0.15);
+            padding: 9px 16px;
+            border-radius: 20px;
+        }
+
+        .section-heading {
+            color: #24577A;
+            border-right: 5px solid #F4B544;
+            padding-right: 12px;
+            margin: 35px 0 20px;
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+        }
+
+        .lesson-card {
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 18px rgba(0,0,0,0.12);
+        }
+
+        .lesson-number {
+            display: inline-block;
+            background: #FFF1D1;
+            color: #24577A;
+            padding: 8px 13px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .lesson-card h3 {
+            color: #24577A;
+            margin-bottom: 12px;
+        }
+
+        .lesson-card p {
+            color: #555;
+            line-height: 1.8;
+            min-height: 55px;
+        }
+
+        .lesson-link {
+            display: block;
+            text-align: center;
+            background: #24577A;
+            color: white;
+            text-decoration: none;
+            padding: 11px;
+            border-radius: 7px;
+            margin-top: 18px;
+        }
+
+        .lesson-link:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .navigation-links a {
+            color: #24577A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .course-hero h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="course-page">
+
+        <section class="course-hero">
+            <h2>دورة تعلم HTML</h2>
+
+            <p>
+                ابدئي رحلتك في عالم تصميم المواقع،
+                وتعلمي كيفية إنشاء صفحات الويب من الصفر.
+            </p>
+
+            <div class="course-details">
+                <span>6 دروس تعليمية</span>
+                <span>مستوى مبتدئ</span>
+                <span>تعلم عملي</span>
+            </div>
+        </section>
+
+        <h2 class="section-heading">محتويات الدورة</h2>
+
+        <div class="lessons-grid">
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 01</span>
+                <h3>مقدمة في HTML</h3>
+                <p>
+                    التعرف على HTML واستخداماتها
+                    ودورها في إنشاء مواقع الويب.
+                </p>
+                <a href="html-lesson1.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 02</span>
+                <h3>بناء صفحة HTML</h3>
+                <p>
+                    التعرف على الهيكل الأساسي للصفحة
+                    والعناصر الرئيسية داخلها.
+                </p>
+                <a href="html-lesson2.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 03</span>
+                <h3>العناوين والفقرات</h3>
+                <p>
+                    تعلم إضافة العناوين والفقرات
+                    وتنظيم النصوص داخل الصفحة.
+                </p>
+                <a href="html-lesson3.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 04</span>
+                <h3>الروابط والصور</h3>
+                <p>
+                    تعلم إضافة الروابط والصور
+                    والتحكم في خصائصها.
+                </p>
+                <a href="html-lesson4.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 05</span>
+                <h3>القوائم والجداول</h3>
+                <p>
+                    تنظيم البيانات باستخدام القوائم
+                    وإنشاء الجداول داخل صفحات الويب.
+                </p>
+                <a href="html-lesson5.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+            <div class="lesson-card">
+                <span class="lesson-number">الدرس 06</span>
+                <h3>النماذج في HTML</h3>
+                <p>
+                    إنشاء نماذج لإدخال البيانات
+                    مثل الاسم والبريد الإلكتروني.
+                </p>
+                <a href="html-lesson6.html" class="lesson-link">
+                    ابدئي الدرس
+                </a>
+            </div>
+
+        </div>
+
+        <div class="navigation-links">
+            <a href="materials.html">العودة للمحتوى التعليمي</a>
+            <a href="index.html">الصفحة الرئيسية</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+</body>
+</html>

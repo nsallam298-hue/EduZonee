@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الأول: أساسيات CSS | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            color: #24577A;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .lesson-section h2 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .lesson-section p, .lesson-section li {
+            line-height: 2;
+            color: #333;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: #fff;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #F5F7FA;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .question {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .check-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="materials.html">المحتوى التعليمي</a>
+        <a href="quizzes.html">الاختبارات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>الدرس الأول: أساسيات CSS</h1>
+        <p>تعلمي كيف تتحكمين في شكل صفحات الويب وتنسيقها.</p>
+    </div>
+
+    <section class="lesson-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>التعرف على مفهوم CSS وأهميتها.</li>
+            <li>معرفة طرق إضافة CSS إلى صفحات HTML.</li>
+            <li>التعرف على المحددات Selectors.</li>
+            <li>كتابة تنسيقات بسيطة باستخدام CSS.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>أولًا: ما هي CSS؟</h2>
+        <p>
+            CSS هي اختصار لـ Cascading Style Sheets، وهي لغة تستخدم لتنسيق
+            صفحات الويب والتحكم في مظهر عناصر HTML.
+        </p>
+        <p>من خلال CSS يمكننا التحكم في:</p>
+        <ul>
+            <li>ألوان النصوص والخلفيات.</li>
+            <li>أحجام الخطوط وأنواعها.</li>
+            <li>المسافات بين العناصر.</li>
+            <li>أحجام العناصر ومواقعها.</li>
+            <li>شكل الصفحة على الشاشات المختلفة.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثانيًا: طرق إضافة CSS</h2>
+
+        <h3>1- Inline CSS</h3>
+        <p>تُكتب داخل العنصر نفسه باستخدام الخاصية style.</p>
+        <pre><code>&lt;p style="color: blue;"&gt;
+    Welcome to EduZone
+&lt;/p&gt;</code></pre>
+
+        <h3>2- Internal CSS</h3>
+        <p>تُكتب داخل وسم style في قسم head بصفحة HTML.</p>
+        <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+        <h3>3- External CSS</h3>
+        <p>تُكتب في ملف خارجي بامتداد css، ثم نربطه بصفحة HTML.</p>
+        <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+        <p>وهذه الطريقة مناسبة للمواقع التي تحتوي على صفحات متعددة.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثالثًا: المحددات Selectors</h2>
+        <p>المحددات تُستخدم لاختيار عناصر HTML التي نريد تنسيقها.</p>
+
+        <h3>1- Element Selector</h3>
+        <p>يستخدم اسم العنصر لتنسيق جميع العناصر من النوع نفسه.</p>
+        <pre><code>p {
+    color: red;
+}</code></pre>
+
+        <h3>2- Class Selector</h3>
+        <p>يستخدم النقطة (.) قبل اسم الفئة لتنسيق العناصر التي تحمل نفس class.</p>
+        <pre><code>.title {
+    color: blue;
+}</code></pre>
+
+        <h3>3- ID Selector</h3>
+        <p>يستخدم العلامة (#) قبل اسم المعرف لتنسيق عنصر محدد.</p>
+        <pre><code>#main {
+    background-color: yellow;
+}</code></pre>
+    </section>
+
+    <section class="lesson-section">
+        <h2>مثال تطبيقي</h2>
+        <p>الكود التالي يوضح كيفية استخدام CSS لتنسيق عنوان وفقرة:</p>
+
+        <pre><code>&lt;h1 class="title"&gt;Welcome to EduZone&lt;/h1&gt;
+&lt;p id="info"&gt;Learn web design easily.&lt;/p&gt;
+
+&lt;style&gt;
+    .title {
+        color: blue;
+    }
+
+    #info {
+        color: gray;
+    }
+&lt;/style&gt;</code></pre>
+
+        <div class="example-box">
+            <h2 style="color: blue;">Welcome to EduZone</h2>
+            <p style="color: gray;">Learn web design easily.</p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>اختبر فهمك</h2>
+
+        <div class="question">
+            <p>1- ما اللغة المستخدمة لتنسيق صفحات الويب؟</p>
+            <label><input type="radio" name="q1" value="a"> HTML</label><br>
+            <label><input type="radio" name="q1" value="b"> CSS</label><br>
+            <label><input type="radio" name="q1" value="c"> SQL</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما العلامة المستخدمة مع Class Selector؟</p>
+            <label><input type="radio" name="q2" value="a"> #</label><br>
+            <label><input type="radio" name="q2" value="b"> .</label><br>
+            <label><input type="radio" name="q2" value="c"> *</label>
+        </div>
+
+        <div class="question">
+            <p>3- أين نكتب كود CSS في طريقة Internal CSS؟</p>
+            <label><input type="radio" name="q3" value="a"> داخل وسم style</label><br>
+            <label><input type="radio" name="q3" value="b"> داخل وسم img</label><br>
+            <label><input type="radio" name="q3" value="c"> داخل وسم footer</label>
+        </div>
+
+        <button class="check-btn" onclick="checkAnswers()">تصحيح الإجابات</button>
+        <p id="result"></p>
+    </section>
+
+    <div class="lesson-navigation">
+        <a href="css-course.html">العودة إلى دروس CSS</a>
+        <a href="css-lesson2.html">الدرس التالي ←</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © EduZone 2026</p>
+</footer>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "b",
+            q2: "b",
+            q3: "a"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        result.textContent = "درجتك: " + score + " من 3";
+
+        if (score === 3) {
+            result.style.color = "green";
+            result.textContent += " - ممتاز! كل إجاباتك صحيحة.";
+        } else {
+            result.style.color = "#c0392b";
+            result.textContent += " - حاولي مرة أخرى.";
+        }
+    }
+</script>
+
+</body>
+</html>
