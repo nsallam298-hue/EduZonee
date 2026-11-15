@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الرابع - الروابط والصور | EduZone</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F5F7FA;
+            color: #263238;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #19415D;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000010;
+        }
+
+        h2 {
+            color: #24577A;
+        }
+
+        .example {
+            background: #F0F3F6;
+            padding: 15px;
+            border-right: 4px solid #F4B544;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+
+        code {
+            color: #24577A;
+        }
+
+        .demo-link {
+            color: #24577A;
+            font-weight: bold;
+        }
+
+        .demo-image {
+            width: 220px;
+            max-width: 100%;
+            border-radius: 10px;
+            border: 3px solid #F4B544;
+        }
+
+        .question {
+            background: #F5F7FA;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #19415D;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .navigation a {
+            background: #24577A;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #24577A;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <p>الدرس الرابع: الروابط والصور في HTML</p>
+</header>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="materials.html">المحتوى التعليمي</a>
+    <a href="quizzes.html">الاختبارات</a>
+    <a href="contact.html">تواصل معنا</a>
+</nav>
+
+<div class="container">
+
+    <div class="section">
+        <h2>أهداف الدرس</h2>
+        <p>بعد الانتهاء من هذا الدرس ستكون قادرًا على:</p>
+        <ul>
+            <li>إنشاء روابط داخل صفحات HTML.</li>
+            <li>إنشاء روابط لمواقع خارجية.</li>
+            <li>إضافة الصور إلى صفحات الويب.</li>
+            <li>استخدام الخصائص href و src و alt.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>أولًا: الروابط في HTML</h2>
+        <p>
+            نستخدم العنصر <code>&lt;a&gt;</code> لإنشاء رابط يسمح للمستخدم
+            بالانتقال إلى صفحة أخرى أو موقع إلكتروني.
+        </p>
+
+        <p>الخاصية <code>href</code> تحدد عنوان الصفحة التي سينتقل إليها المستخدم.</p>
+
+        <div class="example">
+            &lt;a href="https://www.google.com"&gt;زيارة جوجل&lt;/a&gt;
+        </div>
+
+        <p>مثال عملي:</p>
+        <a class="demo-link" href="https://www.google.com" target="_blank" rel="noopener">
+            اضغط هنا لزيارة Google
+        </a>
+    </div>
+
+    <div class="section">
+        <h2>ثانيًا: أنواع الروابط</h2>
+
+        <h3>1- رابط خارجي</h3>
+        <p>ينقل المستخدم إلى موقع إلكتروني آخر.</p>
+
+        <div class="example">
+            &lt;a href="https://www.youtube.com"&gt;YouTube&lt;/a&gt;
+        </div>
+
+        <h3>2- رابط داخلي</h3>
+        <p>ينقل المستخدم إلى صفحة أخرى داخل نفس الموقع.</p>
+
+        <div class="example">
+            &lt;a href="about.html"&gt;من نحن&lt;/a&gt;
+        </div>
+
+        <h3>3- فتح الرابط في نافذة جديدة</h3>
+        <p>
+            نستخدم الخاصية <code>target="_blank"</code> لفتح الرابط
+            في علامة تبويب جديدة.
+        </p>
+
+        <div class="example">
+            &lt;a href="https://www.google.com" target="_blank" rel="noopener"&gt;
+            Google
+            &lt;/a&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ثالثًا: إضافة الصور في HTML</h2>
+
+        <p>
+            نستخدم العنصر <code>&lt;img&gt;</code> لإضافة صورة إلى صفحة الويب.
+            وهو عنصر لا يحتاج إلى وسم إغلاق.
+        </p>
+
+        <p>أهم الخصائص المستخدمة مع الصور:</p>
+
+        <ul>
+            <li><code>src</code>: تحدد مكان الصورة أو مسارها.</li>
+            <li><code>alt</code>: تقدم وصفًا للصورة إذا لم تظهر، وتساعد قارئات الشاشة.</li>
+            <li><code>width</code>: تحدد عرض الصورة.</li>
+            <li><code>height</code>: تحدد ارتفاع الصورة.</li>
+        </ul>
+
+        <div class="example">
+            &lt;img src="images/photo.jpg" alt="صورة تعليمية" width="200"&gt;
+        </div>
+
+        <h3>مثال عملي للصورة:</h3>
+        <img class="demo-image"
+             src="https://placehold.co/400x250/F4B544/24577A?text=EduZone"
+             alt="صورة توضيحية لمنصة EduZone">
+
+        <p>هذه صورة تجريبية لتوضيح طريقة عرض الصور داخل الصفحة.</p>
+    </div>
+
+    <div class="section">
+        <h2>رابعًا: مسارات الصور</h2>
+
+        <p>يمكن أن تكون الصورة داخل مجلد الصور الموجود في المشروع.</p>
+
+        <div class="example">
+            &lt;img src="images/photo.jpg" alt="صورة"&gt;
+        </div>
+
+        <p>
+            في هذا المثال، يبحث المتصفح عن مجلد اسمه
+            <code>images</code> ثم يبحث بداخله عن الصورة
+            <code>photo.jpg</code>.
+        </p>
+
+        <p>يمكن أيضًا استخدام رابط صورة موجود على الإنترنت:</p>
+
+        <div class="example">
+            &lt;img src="https://example.com/photo.jpg" alt="صورة"&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>خامسًا: الفرق بين الروابط والصور</h2>
+
+        <ul>
+            <li><code>&lt;a&gt;</code>: يستخدم لإنشاء الروابط.</li>
+            <li><code>&lt;img&gt;</code>: يستخدم لإضافة الصور.</li>
+            <li><code>href</code>: تحدد وجهة الرابط.</li>
+            <li><code>src</code>: تحدد مصدر الصورة.</li>
+            <li><code>alt</code>: تصف محتوى الصورة.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>سادسًا: تطبيق عملي</h2>
+        <p>اكتب الكود التالي لإنشاء رابط وصورة داخل صفحة HTML:</p>
+
+        <div class="example">
+            &lt;h2&gt;موقعي التعليمي&lt;/h2&gt;<br>
+            &lt;a href="https://www.google.com" target="_blank" rel="noopener"&gt;
+            البحث على Google
+            &lt;/a&gt;<br>
+            &lt;br&gt;<br>
+            &lt;img src="images/book.jpg" alt="كتاب تعليمي" width="200"&gt;
+        </div>
+
+        <p>
+            تذكر أن صورة <code>book.jpg</code> يجب أن تكون موجودة
+            داخل مجلد <code>images</code> حتى تظهر.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>اختبر معلوماتك</h2>
+
+        <div class="question">
+            <p>1- ما العنصر المستخدم لإنشاء الروابط؟</p>
+            <label><input type="radio" name="q1" value="a"> img</label><br>
+            <label><input type="radio" name="q1" value="b"> a</label><br>
+            <label><input type="radio" name="q1" value="c"> p</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما الخاصية التي تحدد مصدر الصورة؟</p>
+            <label><input type="radio" name="q2" value="a"> href</label><br>
+            <label><input type="radio" name="q2" value="b"> alt</label><br>
+            <label><input type="radio" name="q2" value="c"> src</label>
+        </div>
+
+        <div class="question">
+            <p>3- ما وظيفة target="_blank"؟</p>
+            <label><input type="radio" name="q3" value="a"> فتح الرابط في نافذة جديدة</label><br>
+            <label><input type="radio" name="q3" value="b"> إضافة صورة</label><br>
+            <label><input type="radio" name="q3" value="c"> تغيير لون النص</label>
+        </div>
+
+        <button onclick="checkAnswers()">عرض النتيجة</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="navigation">
+        <a href="html-lesson3.html">الدرس السابق</a>
+        <a href="html-course.html">قائمة الدروس</a>
+        <a href="html-lesson5.html">الدرس التالي</a>
+    </div>
+
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © EduZone 2026
+</footer>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+
+        if (document.querySelector('input[name="q1"]:checked')?.value === "b") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q2"]:checked')?.value === "c") {
+            score++;
+        }
+
+        if (document.querySelector('input[name="q3"]:checked')?.value === "a") {
+            score++;
+        }
+
+        document.getElementById("result").textContent =
+            "نتيجتك: " + score + " من 3";
+    }
+</script>
+
+</body>
+</html>

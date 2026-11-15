@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العناوين والفقرات | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-page {
+            width: 90%;
+            max-width: 950px;
+            margin: 40px auto;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #24577A, #397FA8);
+            color: white;
+            padding: 35px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-header h2 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .lesson-header p {
+            line-height: 1.9;
+        }
+
+        .lesson-content {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e8edf2;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .lesson-content h3 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+            margin-bottom: 18px;
+        }
+
+        .lesson-content p {
+            line-height: 2;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .lesson-content ul {
+            padding-right: 25px;
+            line-height: 2.2;
+        }
+
+        .code-example {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: #F4B544;
+            padding: 20px;
+            border-radius: 9px;
+            overflow-x: auto;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .note {
+            background: #FFF7E6;
+            border-right: 5px solid #F4B544;
+            padding: 15px;
+            border-radius: 7px;
+            line-height: 1.9;
+            margin-top: 15px;
+        }
+
+        .example-box {
+            background: #EAF2F8;
+            padding: 22px;
+            border-radius: 9px;
+            margin: 15px 0;
+        }
+
+        .example-box h2,
+        .example-box h3,
+        .example-box h4 {
+            color: #24577A;
+            margin: 12px 0;
+        }
+
+        .practice {
+            background: #EAF2F8;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .practice label {
+            display: block;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+
+        .practice button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .practice button:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+
+        #answer {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #24577A;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .lesson-navigation a:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="lesson-page">
+
+        <section class="lesson-header">
+            <h2>الدرس الثالث: العناوين والفقرات وتنسيق النصوص</h2>
+
+            <p>
+                سنتعلم في هذا الدرس كيفية إضافة العناوين
+                والفقرات إلى صفحات الويب، واستخدام بعض
+                العناصر التي تساعدنا على تنظيم النصوص وإبرازها.
+            </p>
+
+            <p>مدة الدرس المقترحة: 20 دقيقة</p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أهداف الدرس</h3>
+
+            <ul>
+                <li>التعرف على مستويات العناوين في HTML.</li>
+                <li>إنشاء الفقرات النصية.</li>
+                <li>استخدام عناصر تنسيق النصوص.</li>
+                <li>إضافة فواصل الأسطر والخطوط الأفقية.</li>
+                <li>تنظيم محتوى صفحة الويب بصورة واضحة.</li>
+            </ul>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أولاً: العناوين في HTML</h3>
+
+            <p>
+                تُستخدم العناوين لتقسيم محتوى صفحة الويب
+                إلى أجزاء منظمة، وتساعد المستخدم على معرفة
+                الموضوعات الرئيسية والفرعية.
+            </p>
+
+            <p>
+                توفر HTML ستة مستويات من العناوين،
+                تبدأ من H1 وهو العنوان الأكثر أهمية،
+                وتنتهي بـ H6.
+            </p>
+
+            <pre class="code-example">
+&lt;h1&gt;العنوان الرئيسي&lt;/h1&gt;
+&lt;h2&gt;عنوان فرعي&lt;/h2&gt;
+&lt;h3&gt;عنوان أصغر&lt;/h3&gt;
+&lt;h4&gt;عنوان المستوى الرابع&lt;/h4&gt;
+&lt;h5&gt;عنوان المستوى الخامس&lt;/h5&gt;
+&lt;h6&gt;عنوان المستوى السادس&lt;/h6&gt;
+            </pre>
+
+            <h4>شكل العناوين في المتصفح:</h4>
+
+            <div class="example-box">
+                <h1>عنوان H1</h1>
+                <h2>عنوان H2</h2>
+                <h3>عنوان H3</h3>
+                <h4>عنوان H4</h4>
+                <h5>عنوان H5</h5>
+                <h6>عنوان H6</h6>
+            </div>
+
+            <div class="note">
+                نصيحة: استخدمي H1 للعنوان الرئيسي للصفحة،
+                ثم H2 للعناوين الرئيسية للأقسام،
+                وH3 للعناوين الفرعية داخل الأقسام.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>ثانياً: الفقرات النصية</h3>
+
+            <p>
+                يُستخدم العنصر P لإضافة فقرة نصية داخل صفحة الويب.
+                ويمكن أن تحتوي الفقرة على كلمات وجمل متعددة.
+            </p>
+
+            <pre class="code-example">
+&lt;p&gt;
+    HTML is used to create web pages.
+&lt;/p&gt;
+            </pre>
+
+            <h4>شكل الفقرة:</h4>
+
+            <div class="example-box">
+                <p>
+                    HTML is used to create web pages.
+                    It helps organize the content displayed
+                    in a web browser.
+                </p>
+            </div>
+
+            <p>
+                يبدأ المتصفح الفقرة في سطر جديد،
+                ويضيف مسافة مناسبة قبلها وبعدها.
+            </p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>ثالثاً: تنسيق النصوص</h3>
+
+            <p>
+                توفر HTML مجموعة من العناصر التي تساعد
+                على إبراز أجزاء معينة من النص.
+            </p>
+
+            <h4>1. العنصر Strong</h4>
+
+            <p>
+                يُستخدم لإظهار أهمية النص، ويظهر غالباً
+                بخط عريض.
+            </p>
+
+            <pre class="code-example">
+&lt;strong&gt;Important Information&lt;/strong&gt;
+            </pre>
+
+            <div class="example-box">
+                <strong>Important Information</strong>
+            </div>
+
+            <h4>2. العنصر Em</h4>
+
+            <p>
+                يُستخدم للتأكيد على كلمة أو جزء من النص،
+                ويظهر غالباً بخط مائل.
+            </p>
+
+            <pre class="code-example">
+&lt;em&gt;Learning is important&lt;/em&gt;
+            </pre>
+
+            <div class="example-box">
+                <em>Learning is important</em>
+            </div>
+
+            <h4>3. العنصر Mark</h4>
+
+            <p>
+                يُستخدم لتمييز النص وإظهار خلفية ملونة
+                حوله.
+            </p>
+
+            <pre class="code-example">
+&lt;mark&gt;Important Word&lt;/mark&gt;
+            </pre>
+
+            <div class="example-box">
+                <mark>Important Word</mark>
+            </div>
+
+            <h4>4. العنصر Del</h4>
+
+            <p>
+                يُستخدم لتمثيل نص تم حذفه من المحتوى،
+                ويظهر عادةً بخط يتوسطه خط.
+            </p>
+
+            <pre class="code-example">
+&lt;del&gt;Old Price: 100&lt;/del&gt;
+            </pre>
+
+            <div class="example-box">
+                <del>Old Price: 100</del>
+            </div>
+
+            <h4>5. العنصر Ins</h4>
+
+            <p>
+                يُستخدم لتمثيل نص تمت إضافته،
+                ويظهر عادةً تحته خط.
+            </p>
+
+            <pre class="code-example">
+&lt;ins&gt;New Information&lt;/ins&gt;
+            </pre>
+
+            <div class="example-box">
+                <ins>New Information</ins>
+            </div>
+
+            <h4>6. العنصر Small</h4>
+
+            <p>
+                يُستخدم لعرض النص بحجم أصغر من النص المحيط به.
+            </p>
+
+            <pre class="code-example">
+&lt;small&gt;Additional Information&lt;/small&gt;
+            </pre>
+
+            <div class="example-box">
+                <small>Additional Information</small>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>رابعاً: فواصل الأسطر والخطوط</h3>
+
+            <h4>1. العنصر BR</h4>
+
+            <p>
+                يُستخدم للانتقال إلى سطر جديد دون إنشاء فقرة جديدة.
+            </p>
+
+            <pre class="code-example">
+Hello World&lt;br&gt;
+Welcome to EduZone
+            </pre>
+
+            <div class="example-box">
+                Hello World<br>
+                Welcome to EduZone
+            </div>
+
+            <h4>2. العنصر HR</h4>
+
+            <p>
+                يُستخدم لإضافة خط أفقي يفصل بين أجزاء المحتوى.
+            </p>
+
+            <pre class="code-example">
+&lt;p&gt;First Section&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Second Section&lt;/p&gt;
+            </pre>
+
+            <div class="example-box">
+                <p>First Section</p>
+                <hr>
+                <p>Second Section</p>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>خامساً: الفرق بين Strong وB وEm وI</h3>
+
+            <p>
+                قد تظهر بعض العناصر بشكل متشابه،
+                لكنها ليست متطابقة في المعنى.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Strong:</strong>
+                    يوضح أن النص له أهمية خاصة.
+                </li>
+
+                <li>
+                    <strong>B:</strong>
+                    يجعل النص عريضاً دون إضافة معنى دلالي خاص.
+                </li>
+
+                <li>
+                    <strong>Em:</strong>
+                    يضيف تأكيداً دلالياً على النص.
+                </li>
+
+                <li>
+                    <strong>I:</strong>
+                    يعرض النص بشكل مائل دون إضافة معنى التأكيد.
+                </li>
+            </ul>
+
+            <pre class="code-example">
+&lt;strong&gt;Important Text&lt;/strong&gt;
+&lt;b&gt;Bold Text&lt;/b&gt;
+
+&lt;em&gt;Emphasized Text&lt;/em&gt;
+&lt;i&gt;Italic Text&lt;/i&gt;
+            </pre>
+        </section>
+
+        <section class="lesson-content">
+            <h3>تطبيق عملي شامل</h3>
+
+            <p>
+                أنشئي صفحة بعنوان My Learning Journey،
+                واستخدمي فيها العناوين والفقرات وعناصر التنسيق.
+            </p>
+
+            <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Learning Journey&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;My Learning Journey&lt;/h1&gt;
+
+    &lt;h2&gt;About Me&lt;/h2&gt;
+
+    &lt;p&gt;
+        I am learning web development.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;strong&gt;My Goal:&lt;/strong&gt;
+        Build my first website.
+    &lt;/p&gt;
+
+    &lt;hr&gt;
+
+    &lt;h2&gt;My Skills&lt;/h2&gt;
+
+    &lt;p&gt;
+        I am learning &lt;em&gt;HTML&lt;/em&gt; and CSS.
+    &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <div class="note">
+                التطبيق ده يجمع أكثر من عنصر من عناصر الدرس،
+                وبيساعدك على فهم كيفية استخدامها معاً داخل صفحة واحدة.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>اختبري فهمك</h3>
+
+            <div class="practice">
+
+                <p><strong>السؤال الأول: ما العنصر المستخدم لإنشاء فقرة؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    H1
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    P
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    HR
+                </label>
+
+                <hr>
+
+                <p><strong>السؤال الثاني: ما العنصر المستخدم للانتقال إلى سطر جديد؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    STRONG
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="1">
+                    BR
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    MARK
+                </label>
+
+                <hr>
+
+                <p><strong>السؤال الثالث: أي عنصر يدل على أهمية النص؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q3" value="1">
+                    STRONG
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="0">
+                    I
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="0">
+                    BR
+                </label>
+
+                <button type="button" onclick="checkAnswers()">
+                    اعرفي نتيجتك
+                </button>
+
+                <div id="answer"></div>
+
+            </div>
+        </section>
+
+        <div class="lesson-navigation">
+            <a href="html-lesson2.html">← الدرس السابق</a>
+            <a href="html-course.html">قائمة الدروس</a>
+            <a href="html-lesson4.html">الدرس التالي →</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 3; i++) {
+                let selected = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (selected) {
+                    answered++;
+                    score += Number(selected.value);
+                }
+            }
+
+            let answer = document.getElementById("answer");
+
+            if (answered < 3) {
+                answer.innerHTML = "أجيبي عن جميع الأسئلة أولاً.";
+                return;
+            }
+
+            answer.innerHTML = "درجتك: " + score + " من 3";
+
+            if (score === 3) {
+                answer.innerHTML += "<p>ممتاز! جميع إجاباتك صحيحة.</p>";
+            } else {
+                answer.innerHTML += "<p>أحسنتِ، راجعي الدرس وحاولي مرة أخرى.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>

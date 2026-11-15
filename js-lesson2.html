@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثاني: العمليات والشروط | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            color: #24577A;
+            margin-bottom: 30px;
+        }
+
+        .lesson-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .lesson-section h2 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+        }
+
+        .lesson-section p,
+        .lesson-section li {
+            line-height: 2;
+            color: #333;
+        }
+
+        pre {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #F5F7FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .demo-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .question {
+            margin: 20px 0;
+            line-height: 2;
+        }
+
+        .check-btn {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EduZone</h1>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="materials.html">المحتوى التعليمي</a>
+        <a href="quizzes.html">الاختبارات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>الدرس الثاني: العمليات والشروط والحلقات</h1>
+        <p>تعلمي تنفيذ العمليات واتخاذ القرارات وتكرار الأوامر باستخدام JavaScript.</p>
+    </div>
+
+    <section class="lesson-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>التعرف على العمليات الحسابية.</li>
+            <li>استخدام معاملات المقارنة.</li>
+            <li>فهم الجمل الشرطية.</li>
+            <li>التعرف على الحلقات التكرارية.</li>
+            <li>كتابة برامج بسيطة باستخدام JavaScript.</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>أولًا: العمليات الحسابية Arithmetic Operators</h2>
+
+        <p>
+            تستخدم العمليات الحسابية لإجراء العمليات الرياضية على الأرقام
+            والمتغيرات.
+        </p>
+
+        <ul>
+            <li><strong>+</strong> الجمع.</li>
+            <li><strong>-</strong> الطرح.</li>
+            <li><strong>*</strong> الضرب.</li>
+            <li><strong>/</strong> القسمة.</li>
+            <li><strong>%</strong> باقي القسمة.</li>
+            <li><strong>**</strong> الأس.</li>
+        </ul>
+
+        <pre><code>let x = 10;
+let y = 5;
+
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);</code></pre>
+
+        <div class="example-box">
+            <p>الناتج المتوقع بالترتيب:</p>
+            <strong>15 - 5 - 50 - 2 - 0</strong>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثانيًا: معاملات المقارنة Comparison Operators</h2>
+
+        <p>
+            تستخدم معاملات المقارنة لمقارنة قيمتين، وتكون النتيجة
+            إما true أو false.
+        </p>
+
+        <ul>
+            <li><strong>==</strong> يساوي في القيمة.</li>
+            <li><strong>===</strong> يساوي في القيمة ونوع البيانات.</li>
+            <li><strong>!=</strong> لا يساوي في القيمة.</li>
+            <li><strong>&gt;</strong> أكبر من.</li>
+            <li><strong>&lt;</strong> أصغر من.</li>
+            <li><strong>&gt;=</strong> أكبر من أو يساوي.</li>
+            <li><strong>&lt;=</strong> أصغر من أو يساوي.</li>
+        </ul>
+
+        <pre><code>let age = 20;
+
+console.log(age > 18);
+console.log(age === 20);
+console.log(age < 15);</code></pre>
+
+        <div class="example-box">
+            <p>الناتج:</p>
+            <strong>true - true - false</strong>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>ثالثًا: الجمل الشرطية If Statements</h2>
+
+        <p>
+            تستخدم الجمل الشرطية لتنفيذ أوامر مختلفة حسب تحقق شرط معين.
+        </p>
+
+        <h3>1- If</h3>
+        <p>تنفذ الأوامر إذا كان الشرط صحيحًا.</p>
+
+        <pre><code>let age = 20;
+
+if (age >= 18) {
+    console.log("Adult");
+}</code></pre>
+
+        <h3>2- If...Else</h3>
+        <p>تستخدم لتنفيذ أمر إذا تحقق الشرط وأمر آخر إذا لم يتحقق.</p>
+
+        <pre><code>let grade = 50;
+
+if (grade >= 50) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}</code></pre>
+
+        <h3>3- Else If</h3>
+        <p>تستخدم عند وجود أكثر من شرط.</p>
+
+        <pre><code>let grade = 85;
+
+if (grade >= 90) {
+    console.log("Excellent");
+} else if (grade >= 75) {
+    console.log("Very Good");
+} else if (grade >= 50) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}</code></pre>
+
+        <div class="example-box">
+            <h3>جربي الشرط بنفسك</h3>
+            <label for="studentGrade">أدخلي الدرجة:</label>
+            <input type="number" id="studentGrade" min="0" max="100"
+                style="padding:10px;width:100px;">
+            <button class="demo-btn" onclick="checkGrade()">عرض النتيجة</button>
+            <p id="gradeResult"></p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>رابعًا: الحلقات التكرارية Loops</h2>
+
+        <p>
+            تستخدم الحلقات التكرارية لتنفيذ مجموعة من الأوامر عدة مرات
+            دون الحاجة إلى كتابة الأوامر نفسها بشكل متكرر.
+        </p>
+
+        <h3>1- For Loop</h3>
+        <p>تستخدم عندما نعرف عدد مرات التكرار.</p>
+
+        <pre><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+
+        <p>الناتج: 1، 2، 3، 4، 5.</p>
+
+        <h3>2- While Loop</h3>
+        <p>تستمر في التكرار طالما أن الشرط صحيح.</p>
+
+        <pre><code>let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+
+        <h3>3- Do...While Loop</h3>
+        <p>
+            تنفذ الأوامر مرة واحدة على الأقل، ثم تتحقق من الشرط
+            لتحديد استمرار التكرار.
+        </p>
+
+        <pre><code>let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);</code></pre>
+    </section>
+
+    <section class="lesson-section">
+        <h2>خامسًا: تطبيق عملي</h2>
+
+        <p>
+            المثال التالي يستخدم حلقة For لعرض الأرقام من 1 إلى 10.
+        </p>
+
+        <pre><code>let numbers = "";
+
+for (let i = 1; i <= 10; i++) {
+    numbers += i + " ";
+}
+
+console.log(numbers);</code></pre>
+
+        <div class="example-box">
+            <button class="demo-btn" onclick="showNumbers()">عرض الأرقام من 1 إلى 10</button>
+            <p id="numbersResult"></p>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>اختبر فهمك</h2>
+
+        <div class="question">
+            <p>1- ما ناتج العملية 10 % 3 ؟</p>
+            <label><input type="radio" name="q1" value="a"> 3</label><br>
+            <label><input type="radio" name="q1" value="b"> 1</label><br>
+            <label><input type="radio" name="q1" value="c"> 0</label>
+        </div>
+
+        <div class="question">
+            <p>2- ما الجملة المستخدمة لاتخاذ قرار بناءً على شرط؟</p>
+            <label><input type="radio" name="q2" value="a"> if</label><br>
+            <label><input type="radio" name="q2" value="b"> let</label><br>
+            <label><input type="radio" name="q2" value="c"> alert</label>
+        </div>
+
+        <div class="question">
+            <p>3- أي حلقة تستخدم غالبًا عندما نعرف عدد مرات التكرار؟</p>
+            <label><input type="radio" name="q3" value="a"> While</label><br>
+            <label><input type="radio" name="q3" value="b"> If</label><br>
+            <label><input type="radio" name="q3" value="c"> For</label>
+        </div>
+
+        <button class="check-btn" onclick="checkAnswers()">تصحيح الإجابات</button>
+        <p id="result"></p>
+    </section>
+
+    <div class="lesson-navigation">
+        <a href="js-lesson1.html">→ الدرس السابق</a>
+        <a href="js-lesson3.html">الدرس التالي ←</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © EduZone 2026</p>
+</footer>
+
+<script>
+    function checkGrade() {
+        const grade = Number(document.getElementById("studentGrade").value);
+        const result = document.getElementById("gradeResult");
+
+        if (document.getElementById("studentGrade").value === "") {
+            result.textContent = "من فضلك أدخلي الدرجة.";
+        } else if (grade < 0 || grade > 100) {
+            result.textContent = "أدخلي درجة من 0 إلى 100.";
+        } else if (grade >= 90) {
+            result.textContent = "ممتاز";
+        } else if (grade >= 75) {
+            result.textContent = "جيد جدًا";
+        } else if (grade >= 50) {
+            result.textContent = "ناجح";
+        } else {
+            result.textContent = "راسب";
+        }
+    }
+
+    function showNumbers() {
+        let numbers = "";
+
+        for (let i = 1; i <= 10; i++) {
+            numbers += i + " ";
+        }
+
+        document.getElementById("numbersResult").textContent = numbers;
+    }
+
+    function checkAnswers() {
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "c"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        result.textContent = "درجتك: " + score + " من 3";
+
+        if (score === 3) {
+            result.style.color = "green";
+            result.textContent += " - ممتاز! كل إجاباتك صحيحة.";
+        } else {
+            result.style.color = "#c0392b";
+            result.textContent += " - حاولي مرة أخرى.";
+        }
+    }
+</script>
+
+</body>
+</html>

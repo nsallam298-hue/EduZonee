@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبارات - EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .quiz-container {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .quiz-intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .quiz-intro h1 {
+            color: #24577A;
+            margin-bottom: 15px;
+        }
+
+        .quiz-intro p {
+            color: #263238;
+            line-height: 1.8;
+        }
+
+        .question {
+            padding: 22px;
+            margin-bottom: 25px;
+            background-color: #F5F7FA;
+            border-radius: 10px;
+            border-right: 5px solid #F4B544;
+        }
+
+        .question h3 {
+            color: #24577A;
+            margin-bottom: 18px;
+        }
+
+        .question label {
+            display: block;
+            padding: 10px;
+            cursor: pointer;
+            color: #263238;
+        }
+
+        .question input {
+            margin-left: 8px;
+        }
+
+        .quiz-button {
+            display: block;
+            margin: 30px auto;
+            padding: 13px 35px;
+            background-color: #24577A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .quiz-button:hover {
+            background-color: #F4B544;
+            color: #263238;
+        }
+
+        #result {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #F5F7FA;
+            border-radius: 10px;
+            color: #24577A;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin: 30px;
+            color: #24577A;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="quiz-container">
+
+        <section class="quiz-intro">
+            <h1>الاختبارات التعليمية</h1>
+            <p>
+                اختبري معلوماتك من خلال الإجابة عن الأسئلة التالية،
+                واحصلي على نتيجتك فور الانتهاء.
+            </p>
+        </section>
+
+        <form id="quizForm">
+
+            <div class="question">
+                <h3>السؤال الأول: ماذا تعني HTML؟</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    لغة توصيف النص التشعبي
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    لغة برمجة لتصميم قواعد البيانات
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    برنامج لتعديل الصور
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>السؤال الثاني: ما وظيفة CSS؟</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    إنشاء قواعد البيانات
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="1">
+                    تنسيق وتصميم صفحات الويب
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="0">
+                    تشغيل نظام التشغيل
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>السؤال الثالث: أي لغة تُستخدم لإضافة التفاعل إلى صفحات الويب؟</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="0">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="0">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="1">
+                    JavaScript
+                </label>
+            </div>
+
+            <button type="button" class="quiz-button" onclick="checkAnswers()">
+                اعرفي النتيجة
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+        <a href="index.html" class="back-home">العودة إلى الصفحة الرئيسية</a>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 3; i++) {
+                let answer = document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+                if (answer) {
+                    answered++;
+                    score += Number(answer.value);
+                }
+            }
+
+            let result = document.getElementById("result");
+
+            if (answered < 3) {
+                result.innerHTML = "من فضلك أجيبي عن جميع الأسئلة أولاً.";
+                return;
+            }
+
+            result.innerHTML = "درجتك هي: " + score + " من 3";
+
+            if (score === 3) {
+                result.innerHTML += "<p>ممتاز! جميع إجاباتك صحيحة.</p>";
+            } else if (score === 2) {
+                result.innerHTML += "<p>أداء جيد جداً! حاولي الوصول للدرجة النهائية.</p>";
+            } else {
+                result.innerHTML += "<p>حاولي مرة أخرى لتحسين نتيجتك.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

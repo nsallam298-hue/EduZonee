@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقدمة في HTML | EduZone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .lesson-page {
+            width: 90%;
+            max-width: 950px;
+            margin: 40px auto;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #24577A, #397FA8);
+            color: white;
+            padding: 35px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+
+        .lesson-header h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .lesson-header p {
+            line-height: 1.9;
+        }
+
+        .lesson-content {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e8edf2;
+        }
+
+        .lesson-content h3 {
+            color: #24577A;
+            border-right: 4px solid #F4B544;
+            padding-right: 12px;
+            margin-bottom: 18px;
+        }
+
+        .lesson-content p {
+            line-height: 2;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .lesson-content ul {
+            padding-right: 25px;
+            line-height: 2.2;
+        }
+
+        .code-example {
+            direction: ltr;
+            text-align: left;
+            background: #263238;
+            color: #F4B544;
+            padding: 20px;
+            border-radius: 9px;
+            overflow-x: auto;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .note {
+            background: #FFF7E6;
+            border-right: 5px solid #F4B544;
+            padding: 15px;
+            border-radius: 7px;
+            line-height: 1.9;
+            margin-top: 15px;
+        }
+
+        .practice {
+            background: #EAF2F8;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .practice button {
+            background: #24577A;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .practice button:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+
+        #answer {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #24577A;
+        }
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .lesson-navigation a {
+            background: #24577A;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .lesson-navigation a:hover {
+            background: #F4B544;
+            color: #263238;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduZone</h1>
+
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="materials.html">المحتوى التعليمي</a>
+            <a href="quizzes.html">الاختبارات</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="lesson-page">
+
+        <section class="lesson-header">
+            <h2>الدرس الأول: مقدمة في HTML</h2>
+            <p>
+                في هذا الدرس سنتعرف على لغة HTML،
+                وأهميتها في إنشاء صفحات الويب،
+                وكيفية استخدامها لبناء الهيكل الأساسي للموقع.
+            </p>
+            <p>مدة الدرس المقترحة: 15 دقيقة</p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أهداف الدرس</h3>
+
+            <p>بنهاية هذا الدرس ستكونين قادرة على:</p>
+
+            <ul>
+                <li>تعريف لغة HTML.</li>
+                <li>فهم أهمية HTML في تصميم المواقع.</li>
+                <li>التعرف على استخدامات اللغة.</li>
+                <li>التمييز بين HTML وCSS وJavaScript.</li>
+            </ul>
+        </section>
+
+        <section class="lesson-content">
+            <h3>ما هي HTML؟</h3>
+
+            <p>
+                HTML هي اختصار لعبارة HyperText Markup Language،
+                وتعني لغة توصيف النص التشعبي.
+            </p>
+
+            <p>
+                تُستخدم HTML لإنشاء الهيكل الأساسي لصفحات الويب،
+                فهي تحدد أماكن العناوين والفقرات والصور والروابط
+                والجداول وغيرها من العناصر.
+            </p>
+
+            <p>
+                لا تُعد HTML لغة برمجة بالمعنى التقليدي،
+                بل هي لغة توصيف تساعد المتصفح على فهم
+                وتنظيم محتوى الصفحة.
+            </p>
+
+            <div class="note">
+                معلومة مهمة: عند فتح أي موقع إلكتروني،
+                يقوم المتصفح بقراءة كود HTML وعرض عناصر
+                الصفحة للمستخدم بالشكل المناسب.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>أهمية HTML</h3>
+
+            <ul>
+                <li>إنشاء صفحات ومواقع الويب.</li>
+                <li>تنظيم النصوص والعناوين داخل الصفحة.</li>
+                <li>إضافة الصور والروابط.</li>
+                <li>إنشاء القوائم والجداول.</li>
+                <li>إنشاء النماذج لإدخال البيانات.</li>
+                <li>توفير الهيكل الذي تعتمد عليه لغات تصميم وتطوير الويب الأخرى.</li>
+            </ul>
+        </section>
+
+        <section class="lesson-content">
+            <h3>الفرق بين HTML وCSS وJavaScript</h3>
+
+            <p>
+                تعمل هذه التقنيات معًا لإنشاء مواقع ويب متكاملة،
+                ولكل واحدة منها وظيفة مختلفة:
+            </p>
+
+            <ul>
+                <li><strong>HTML:</strong> مسؤولة عن بناء هيكل الصفحة ومحتواها.</li>
+                <li><strong>CSS:</strong> مسؤولة عن الألوان والتنسيق والتصميم.</li>
+                <li><strong>JavaScript:</strong> مسؤولة عن إضافة التفاعل والوظائف البرمجية.</li>
+            </ul>
+
+            <div class="note">
+                تخيلي أن HTML هي هيكل المنزل،
+                وCSS هي الديكورات والألوان،
+                وJavaScript هي الأنظمة التي تجعل المنزل أكثر تفاعلًا.
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <h3>مثال عملي بسيط</h3>
+
+            <p>
+                يمكننا استخدام HTML لإنشاء عنوان وفقرة داخل صفحة ويب.
+            </p>
+
+            <pre class="code-example">
+&lt;h1&gt;Welcome to EduZone&lt;/h1&gt;
+
+&lt;p&gt;Learn something new every day.&lt;/p&gt;
+            </pre>
+
+            <p>عند عرض هذا الكود في المتصفح سيظهر:</p>
+
+            <div class="practice">
+                <h2 style="color:#24577A;">Welcome to EduZone</h2>
+                <p>Learn something new every day.</p>
+            </div>
+
+            <p>
+                استخدمنا العنصر h1 لإنشاء عنوان رئيسي،
+                والعنصر p لإنشاء فقرة نصية.
+            </p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>تطبيق عملي</h3>
+
+            <p>
+                افتحي برنامج VS Code، وأنشئي ملفًا جديدًا
+                باسم my-first-page.html، ثم اكتبي الكود التالي:
+            </p>
+
+            <pre class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <p>
+                احفظي الملف وافتحيه باستخدام المتصفح،
+                ولاحظي ظهور العنوان والفقرة.
+            </p>
+        </section>
+
+        <section class="lesson-content">
+            <h3>اختبري فهمك</h3>
+
+            <div class="practice">
+                <p><strong>ما الوظيفة الأساسية للغة HTML؟</strong></p>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    إضافة الألوان والتصميم.
+                </label>
+                <br>
+
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    بناء الهيكل الأساسي لصفحة الويب.
+                </label>
+                <br>
+
+                <label>
+                    <input type="radio" name="q1" value="0">
+                    إضافة المؤثرات الصوتية فقط.
+                </label>
+
+                <br>
+
+                <button type="button" onclick="checkLessonAnswer()">
+                    تحقق من الإجابة
+                </button>
+
+                <div id="answer"></div>
+            </div>
+        </section>
+
+        <div class="lesson-navigation">
+            <a href="html-course.html">قائمة الدروس</a>
+            <a href="html-lesson2.html">الدرس التالي ←</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © EduZone 2026</p>
+    </footer>
+
+    <script>
+        function checkLessonAnswer() {
+            let selected = document.querySelector(
+                'input[name="q1"]:checked'
+            );
+
+            let answer = document.getElementById("answer");
+
+            if (!selected) {
+                answer.innerHTML = "من فضلك اختاري إجابة أولاً.";
+            } else if (selected.value === "1") {
+                answer.innerHTML = "إجابة صحيحة! أحسنتِ.";
+            } else {
+                answer.innerHTML = "إجابة غير صحيحة، حاولي مرة أخرى.";
+            }
+        }
+    </script>
+
+</body>
+</html>
