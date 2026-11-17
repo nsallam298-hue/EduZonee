@@ -7,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFF5FA;
-    color: #4B3B50;
+    background-color: #F5F7FA;
+    color: #263238;
 }
 
 header {
-    background-color: #7551A6;
+    background-color: #24577A;
     color: white;
     padding: 20px 7%;
     display: flex;
@@ -40,12 +40,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #F4C5DD;
+    color: #F4B544;
 }
 
 .hero {
     min-height: 400px;
-    background: linear-gradient(135deg, #7551A6, #B58ACB);
+    background: linear-gradient(135deg, #24577A, #397FA5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,16 +67,12 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    background-color: #E9B8D0;
-    color: #4B3B50;
+    background-color: #F4B544;
+    color: #263238;
     padding: 13px 28px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #DFA3C3;
 }
 
 .services {
@@ -86,7 +82,7 @@ nav a:hover {
 
 .services h2 {
     margin-bottom: 35px;
-    color: #7551A6;
+    color: #24577A;
 }
 
 .cards {
@@ -101,11 +97,11 @@ nav a:hover {
     padding: 30px 20px;
     border-radius: 12px;
     flex: 1 1 220px;
-    box-shadow: 0 3px 12px rgba(117,81,166,0.12);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .card h3 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 15px;
 }
 
@@ -114,7 +110,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #7551A6;
+    background-color: #24577A;
     color: white;
     text-align: center;
     padding: 20px;
@@ -135,7 +131,7 @@ footer {
 }
 
 .about-hero {
-    background: linear-gradient(135deg, #7551A6, #B58ACB);
+    background-color: #24577A;
     color: white;
     text-align: center;
     padding: 70px 20px;
@@ -165,21 +161,22 @@ footer {
     border-radius: 12px;
     flex: 1 1 250px;
     text-align: center;
-    box-shadow: 0 3px 12px rgba(117,81,166,0.12);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .about-box h2 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 20px;
 }
 
 .about-box p {
     line-height: 2;
-    color: #4B3B50;
+    color: #444;
 }
 
+
 .materials-hero {
-    background: linear-gradient(135deg, #7551A6, #B58ACB);
+    background-color: #24577A;
     color: white;
     text-align: center;
     padding: 70px 20px;
@@ -201,7 +198,7 @@ footer {
 }
 
 .materials-section h2 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 35px;
 }
 
@@ -216,8 +213,9 @@ footer {
     margin-top: 10px;
 }
 
+
 .quiz-hero {
-    background: linear-gradient(135deg, #7551A6, #B58ACB);
+    background-color: #24577A;
     color: white;
     text-align: center;
     padding: 70px 20px;
@@ -239,7 +237,7 @@ footer {
 }
 
 .quiz-section > h2 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 35px;
 }
 
@@ -256,11 +254,11 @@ footer {
     margin-top: 35px;
     border-radius: 12px;
     text-align: right;
-    box-shadow: 0 3px 12px rgba(117,81,166,0.12);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .sample-quiz h2 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 20px;
 }
 
@@ -270,15 +268,16 @@ footer {
 }
 
 .quiz-option {
-    background-color: #FFF0F6;
+    background-color: #F5F7FA;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    border: 1px solid #E9B8D0;
+    border: 1px solid #ddd;
 }
 
+
 .contact-hero {
-    background: linear-gradient(135deg, #7551A6, #B58ACB);
+    background-color: #24577A;
     color: white;
     text-align: center;
     padding: 70px 20px;
@@ -306,12 +305,12 @@ footer {
     padding: 30px;
     border-radius: 12px;
     flex: 1 1 280px;
-    box-shadow: 0 3px 12px rgba(117,81,166,0.12);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .contact-info h2,
 .contact-form h2 {
-    color: #7551A6;
+    color: #24577A;
     margin-bottom: 20px;
 }
 
@@ -329,7 +328,7 @@ footer {
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border: 1px solid #E9B8D0;
+    border: 1px solid #ccc;
     border-radius: 7px;
     font-family: Arial;
     font-size: 15px;
